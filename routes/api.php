@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerControllerapi;
 use App\Http\Controllers\ProductapiController;
 use App\Http\Controllers\UsersapiController;
 use Illuminate\Http\Request;
@@ -80,3 +81,16 @@ Route::post('/add/product', [ProductapiController::class, 'add_product']);
 
 //add multile Product  post Api
 Route::post('/add/product_multiple', [ProductapiController::class, 'add_productmultiple']);
+
+
+
+//show customer list api
+Route::get('/customer-list/{id?}', [CustomerControllerapi::class, 'list_customer']);
+
+
+//add single and multiple  customer post api
+Route::post('/add-customer', [CustomerControllerapi::class, 'add_customer']);
+
+//update single  customer put api use
+
+
